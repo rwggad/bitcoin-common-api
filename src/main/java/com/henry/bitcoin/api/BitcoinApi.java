@@ -6,6 +6,8 @@ import java.util.Map;
 
 public interface BitcoinApi {
 
+    BlockInfo getBlockchainInfo();
+
     String getNewAddress();
 
     /*

@@ -20,6 +20,11 @@ public class BitcoinTemplate extends RpcApiTemplate implements BitcoinApi {
     }
 
     @Override
+    public BlockInfo getBlockchainInfo() {
+        return invoke("getblockchaininfo", null, BlockInfo.class);
+    }
+
+    @Override
     public String getNewAddress() {
         return invoke("getnewaddress", null, String.class);
     }
